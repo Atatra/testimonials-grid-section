@@ -1,0 +1,203 @@
+:root {
+  --modViolet: hsl(263, 55%, 52%);
+  --lViolet: hsl(263, 38%, 63%);
+  --vDarkGrayBlue: hsl(217, 19%, 35%);
+  --vDarkBlackBlue: hsl(219, 29%, 14%);
+  --lGray: hsl(0, 0%, 81%);
+  --lGrayBlue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/** Layout **/
+body {
+  min-height: 100vh;
+  background-color: var(--lGrayBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-bottom: 35px;
+}
+
+main.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px 30px;
+  margin-top: 70px;
+  margin-bottom: 35px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 70em) {
+  footer {
+    margin-bottom: 40px;
+  }
+  main.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 120px;
+    margin-bottom: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  article.daniel {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  article.jeanette {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  article.patrick {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+  article.kira {
+    grid-row: 1 / span 2;
+  }
+}
+
+/** General **/
+.grid > article {
+  border-radius: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid > article > p {
+  color: inherit;
+  opacity: 70%;
+}
+
+img {
+  justify-self: left;
+  border-radius: 100%;
+}
+
+.identity {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.identity > .name {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.identity > .name > span {
+  color: inherit;
+  opacity: 50%;
+}
+
+/** Daniel **/
+.daniel {
+  background-color: var(--modViolet);
+  color: var(--lGray);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 20px;
+}
+
+.daniel > h1 {
+  color: var(--white);
+}
+
+.daniel > .identity > img {
+  border: solid var(--lViolet) 3px;
+}
+
+/** Jonathan **/
+.jonathan {
+  background-color: var(--vDarkGrayBlue);
+  color: var(--lGray);
+}
+
+.jonathan > h1 {
+  color: var(--white);
+}
+
+/** Jeanette **/
+.jeanette {
+  background-color: var(--white);
+  color: var(--vDarkGrayBlue);
+}
+
+/** Patrick **/
+.patrick {
+  background-color: var(--vDarkBlackBlue);
+  color: var(--lGray);
+}
+
+.patrick > h1 {
+  color: var(--white);
+}
+
+.patrick > .identity > img {
+  border: solid var(--modViolet) 3px;
+}
+
+/** Kira **/
+.kira {
+  background-color: var(--white);
+  color: var(--vDarkGrayBlue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/** Fonts **/
+.barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/** Reset styles **/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-top: 0;
+  margin-block-end: 0;
+}
