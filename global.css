@@ -34,14 +34,14 @@ main.grid {
 
 @media screen and (min-width: 70em) {
   footer {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
   main.grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin-top: 120px;
-    margin-bottom: 80px;
+    grid-template-rows: repeat(2, 285px);
+    margin-top: 60px;
+    margin-bottom: 35px;
     margin-left: 90px;
     margin-right: 90px;
   }
@@ -71,9 +71,14 @@ main.grid {
   gap: 20px;
 }
 
+.grid > article > h1 {
+  font-size: 1.4rem;
+}
+
 .grid > article > p {
   color: inherit;
   opacity: 70%;
+  font-size: 0.813rem;
 }
 
 img {
