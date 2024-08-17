@@ -10,7 +10,7 @@
 
 /** Layout **/
 body {
-  min-height: 100vh;
+  min-height: 97vh;
   background-color: var(--lGrayBlue);
   display: flex;
   flex-direction: column;
